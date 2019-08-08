@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blackpupil2.com</id>
     <title>Gridea</title>
-    <updated>2019-08-07T10:46:52.637Z</updated>
+    <updated>2019-08-08T08:47:34.970Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blackpupil2.com"/>
     <link rel="self" href="https://blackpupil2.com/atom.xml"/>
@@ -11,35 +11,65 @@
     <icon>https://blackpupil2.com/favicon.ico</icon>
     <rights>All rights reserved 2019, Gridea</rights>
     <entry>
-        <title type="html"><![CDATA[C语言设计]]></title>
+        <title type="html"><![CDATA[统计字符]]></title>
+        <id>https://blackpupil2.com/post/tong-ji-zi-fu</id>
+        <link href="https://blackpupil2.com/post/tong-ji-zi-fu">
+        </link>
+        <updated>2019-08-08T08:46:47.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>#include &lt;stdio.h&gt;
+int main(){
+    int letter,blank,digit,other;
+    char ch;
+    int i;
+    digit=other=blank=letter=0;
+    for(i=1;i&lt;=10;i++){
+        ch=getchar();
+        if((ch&gt;='a'&amp;&amp;ch&lt;='z')||(ch&gt;='A'&amp;&amp;ch&lt;='Z')){
+            letter++;
+        }
+        else if(ch&gt;='0'&amp;&amp;ch&lt;='9'){
+            digit++;
+        }
+        else if(ch==' '||ch=='\n'){
+            blank++;
+        }
+        else
+            other++;
+    }
+    printf(&quot;letter = %d, blank = %d, digit = %d, other = %d&quot;,letter,blank,digit,other);
+    return 0;
+}
+</code></pre>
+<p>注意英文字符包括大写字母</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[练习2-14 求奇数分之一序列前N项和]]></title>
         <id>https://blackpupil2.com/post/c-yu-yan-she-ji</id>
         <link href="https://blackpupil2.com/post/c-yu-yan-she-ji">
         </link>
         <updated>2019-08-07T10:43:58.000Z</updated>
-        <content type="html"><![CDATA[<p>练习2-14 求奇数分之一序列前N项和</p>
+        <content type="html"><![CDATA[<h1 id="练习2-14-求奇数分之一序列前n项和">练习2-14 求奇数分之一序列前N项和</h1>
 <p>输入格式:<br>
 输入在一行中给出一个正整数N。</p>
 <p>输出格式:<br>
 在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后6位。题目保证计算结果不超过双精度范围。</p>
-<p>输入样例:<br>
-23<br>
-输出样例:<br>
-sum = 2.549541</p>
-<p>#include &lt;stdio.h&gt;<br>
-int main(){<br>
-double sum,item;<br>
-int N,denominator;<br>
-int i;<br>
-sum = 0;<br>
-denominator=1;<br>
-scanf(&quot;%d&quot;,&amp;N);<br>
-for(i=1;i&lt;=N;i++){<br>
-sum=sum+1.0/(denominator);<br>
-denominator=denominator+2;<br>
-}<br>
-printf(&quot;sum = %.6f&quot;,sum);<br>
-return 0;<br>
-}</p>
+<pre><code>#include &lt;stdio.h&gt;
+int main(){
+    double sum,item;
+    int N,denominator;
+    int i;
+    sum = 0;
+    denominator=1;
+    scanf(&quot;%d&quot;,&amp;N);
+    for(i=1;i&lt;=N;i++){
+        sum=sum+1.0/(denominator);
+        denominator=denominator+2;
+    }
+    printf(&quot;sum = %.6f&quot;,sum);
+    return 0;
+}
+</code></pre>
 ]]></content>
     </entry>
     <entry>

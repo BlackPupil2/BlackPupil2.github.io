@@ -2,9 +2,9 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>C语言设计 | Gridea</title>
+<title>练习2-14 求奇数分之一序列前N项和 | Gridea</title>
 <meta name="description" content="温故而知新" />
-<link rel="shortcut icon" href="https://blackpupil2.com/favicon.ico?v=1565174754919">
+<link rel="shortcut icon" href="https://blackpupil2.com/favicon.ico?v=1565254049417">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://blackpupil2.com/styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://blackpupil2.com">
-  <img class="avatar" src="https://blackpupil2.com/images/avatar.png?v=1565174754919" alt="">
+  <img class="avatar" src="https://blackpupil2.com/images/avatar.png?v=1565254049417" alt="">
   </a>
   <h1 class="site-title">
     Gridea
@@ -73,7 +73,7 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              C语言设计
+              练习2-14 求奇数分之一序列前N项和
             </h2>
             <div class="post-info">
               <span>
@@ -87,34 +87,34 @@
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>练习2-14 求奇数分之一序列前N项和</p>
+                <h1 id="练习2-14-求奇数分之一序列前n项和">练习2-14 求奇数分之一序列前N项和</h1>
 <p>输入格式:<br>
 输入在一行中给出一个正整数N。</p>
 <p>输出格式:<br>
 在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后6位。题目保证计算结果不超过双精度范围。</p>
-<p>输入样例:<br>
-23<br>
-输出样例:<br>
-sum = 2.549541</p>
-<p>#include &lt;stdio.h&gt;<br>
-int main(){<br>
-double sum,item;<br>
-int N,denominator;<br>
-int i;<br>
-sum = 0;<br>
-denominator=1;<br>
-scanf(&quot;%d&quot;,&amp;N);<br>
-for(i=1;i&lt;=N;i++){<br>
-sum=sum+1.0/(denominator);<br>
-denominator=denominator+2;<br>
-}<br>
-printf(&quot;sum = %.6f&quot;,sum);<br>
-return 0;<br>
-}</p>
+<pre><code>#include &lt;stdio.h&gt;
+int main(){
+    double sum,item;
+    int N,denominator;
+    int i;
+    sum = 0;
+    denominator=1;
+    scanf(&quot;%d&quot;,&amp;N);
+    for(i=1;i&lt;=N;i++){
+        sum=sum+1.0/(denominator);
+        denominator=denominator+2;
+    }
+    printf(&quot;sum = %.6f&quot;,sum);
+    return 0;
+}
+</code></pre>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li><a href="#%E7%BB%83%E4%B9%A02-14-%E6%B1%82%E5%A5%87%E6%95%B0%E5%88%86%E4%B9%8B%E4%B8%80%E5%BA%8F%E5%88%97%E5%89%8Dn%E9%A1%B9%E5%92%8C">练习2-14 求奇数分之一序列前N项和</a></li>
+</ul>
+
               </div>
             </div>
           </article>
