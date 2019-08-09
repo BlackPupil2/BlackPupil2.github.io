@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blackpupil2.com</id>
-    <title>Gridea</title>
-    <updated>2019-08-08T08:47:34.970Z</updated>
+    <title>BlackPupil的学习站</title>
+    <updated>2019-08-09T14:12:03.010Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blackpupil2.com"/>
     <link rel="self" href="https://blackpupil2.com/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://blackpupil2.com/images/avatar.png</logo>
     <icon>https://blackpupil2.com/favicon.ico</icon>
-    <rights>All rights reserved 2019, Gridea</rights>
+    <rights>All rights reserved 2019, BlackPupil的学习站</rights>
     <entry>
         <title type="html"><![CDATA[统计字符]]></title>
         <id>https://blackpupil2.com/post/tong-ji-zi-fu</id>
