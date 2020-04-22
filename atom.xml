@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://blackpupil2.com</id>
     <title>BlackPupil的学习站</title>
-    <updated>2020-04-22T04:58:46.533Z</updated>
+    <updated>2020-04-22T05:20:30.110Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://blackpupil2.com"/>
     <link rel="self" href="https://blackpupil2.com/atom.xml"/>
@@ -11,25 +11,25 @@
     <icon>https://blackpupil2.com/favicon.ico</icon>
     <rights>All rights reserved 2020, BlackPupil的学习站</rights>
     <entry>
+        <title type="html"><![CDATA[meshgrid函数]]></title>
+        <id>https://blackpupil2.com/post/meshgrid-han-shu/</id>
+        <link href="https://blackpupil2.com/post/meshgrid-han-shu/">
+        </link>
+        <updated>2020-04-22T05:15:32.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[matlab中linspace函数]]></title>
+        <id>https://blackpupil2.com/post/matlab-zhong-linspace-han-shu/</id>
+        <link href="https://blackpupil2.com/post/matlab-zhong-linspace-han-shu/">
+        </link>
+        <updated>2020-04-22T05:07:55.000Z</updated>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[matlab]]></title>
         <id>https://blackpupil2.com/post/matlab/</id>
         <link href="https://blackpupil2.com/post/matlab/">
         </link>
         <updated>2020-04-22T04:30:07.000Z</updated>
-        <content type="html"><![CDATA[<p>line()函数可以在画布中画一些辅助线。<br>
-line([起点横坐标，终点横坐标],[起点纵坐标，终点纵坐标])，</p>
-<p>line([1,2],[3,4])将画出（1,3）到(2,4)的一条直线，而不是(1,2)到(3,4)。<code>😒</code></p>
-<ol>
-<li>subplot(131)</li>
-<li>line([1,2],[3,4]);</li>
-<li>subplot(132)</li>
-<li>line([1,1],[3,5],'color','k','linestyle','--');</li>
-<li>subplot(133)</li>
-<li>line([3,5],[2,2],'linestyle','-','color','r');</li>
-</ol>
-<p>注意：如果要想设置线的颜色以及格式，那么就可以像上面代码中的那样写就可以，首先要写一个’color’，然后后面紧跟着一个参数就是代表颜色的字母，如黑色’k’，然后还可以设置线的格式，首先要写参数’linestyle’，然后后面紧跟着一个参数就是线的格式，如虚线’- -’。当然了设置颜色以及线的格式没有先后顺序，但是必须要相互匹配，即’color’的后一个参数必须是表示颜色的字符，而不能写成表示线格式的，'linestyle’的后一个参数必须是表示线格式的字符，而不能写成表示线颜色的。如写成下面格式就是错误的：</p>
-<p><code>line([3,5],[2,2],'linestyle','--','color','k');</code></p>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[统计字符]]></title>
@@ -37,32 +37,6 @@ line([起点横坐标，终点横坐标],[起点纵坐标，终点纵坐标])，
         <link href="https://blackpupil2.com/post/tong-ji-zi-fu/">
         </link>
         <updated>2019-08-08T08:46:47.000Z</updated>
-        <content type="html"><![CDATA[<pre><code>#include &lt;stdio.h&gt;
-int main(){
-    int letter,blank,digit,other;
-    char ch;
-    int i;
-    digit=other=blank=letter=0;
-    for(i=1;i&lt;=10;i++){
-        ch=getchar();
-        if((ch&gt;='a'&amp;&amp;ch&lt;='z')||(ch&gt;='A'&amp;&amp;ch&lt;='Z')){
-            letter++;
-        }
-        else if(ch&gt;='0'&amp;&amp;ch&lt;='9'){
-            digit++;
-        }
-        else if(ch==' '||ch=='\n'){
-            blank++;
-        }
-        else
-            other++;
-    }
-    printf(&quot;letter = %d, blank = %d, digit = %d, other = %d&quot;,letter,blank,digit,other);
-    return 0;
-}
-</code></pre>
-<p>注意英文字符包括大写字母</p>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[练习2-14 求奇数分之一序列前N项和]]></title>
@@ -70,28 +44,6 @@ int main(){
         <link href="https://blackpupil2.com/post/c-yu-yan-she-ji/">
         </link>
         <updated>2019-08-07T10:43:58.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="练习2-14-求奇数分之一序列前n项和">练习2-14 求奇数分之一序列前N项和</h1>
-<p>输入格式:<br>
-输入在一行中给出一个正整数N。</p>
-<p>输出格式:<br>
-在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后6位。题目保证计算结果不超过双精度范围。</p>
-<pre><code>#include &lt;stdio.h&gt;
-int main(){
-    double sum,item;
-    int N,denominator;
-    int i;
-    sum = 0;
-    denominator=1;
-    scanf(&quot;%d&quot;,&amp;N);
-    for(i=1;i&lt;=N;i++){
-        sum=sum+1.0/(denominator);
-        denominator=denominator+2;
-    }
-    printf(&quot;sum = %.6f&quot;,sum);
-    return 0;
-}
-</code></pre>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
@@ -104,25 +56,6 @@ int main(){
 ]]></summary>
         <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
 ✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="http://hvenotes.fehey.com/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>𝖶𝗂𝗇𝖽𝗈𝗐𝗌</strong> 或 <strong>𝖬𝖺𝖼𝖮𝖲</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>
