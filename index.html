@@ -1,220 +1,321 @@
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
+<meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>BlackPupil的学习站</title>
-<meta name="description" content="温故而知新" />
-<link rel="shortcut icon" href="https://blackpupil2.com/favicon.ico?v=1587529924200">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<title>
+    BlackPupil的学习站
+</title>
+<link rel="shortcut icon" href="https://blackpupil2.com/favicon.ico?v=1587531392531">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://blackpupil2.com/styles/main.css">
-
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://blackpupil2.com/media/js/jquery.sticky-sidebar.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+</head>
 
-  </head>
-  <body>
+<body>
     <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://blackpupil2.com">
-  <img class="avatar" src="https://blackpupil2.com/images/avatar.png?v=1587529924200" alt="">
-  </a>
-  <h1 class="site-title">
-    BlackPupil的学习站
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://blackpupil2.com">
+                <img class="avatar" src="https://blackpupil2.com/images/avatar.png?v=1587531392531" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    BlackPupil的学习站
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
 </div>
 
-    
-        <div class="post-container">
-  
-    <article class="post">
-      <a href="https://blackpupil2.com/post/matlab/">
-        <h2 class="post-title">matlab</h2>
-      </a>
-      <div class="post-info">
-        <span>
-          2020-04-22
-        </span>
-        <span>
-          1 min read
-        </span>
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
         
-      </div>
-      
-      <div class="post-abstract">
-        
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://blackpupil2.com/post/tong-ji-zi-fu/">
-        <h2 class="post-title">统计字符</h2>
-      </a>
-      <div class="post-info">
-        <span>
-          2019-08-08
-        </span>
-        <span>
-          1 min read
-        </span>
-        
-      </div>
-      
-      <div class="post-abstract">
-        
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://blackpupil2.com/post/c-yu-yan-she-ji/">
-        <h2 class="post-title">练习2-14 求奇数分之一序列前N项和</h2>
-      </a>
-      <div class="post-info">
-        <span>
-          2019-08-07
-        </span>
-        <span>
-          1 min read
-        </span>
-        
-      </div>
-      
-      <div class="post-abstract">
-        
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://blackpupil2.com/post/hello-gridea/">
-        <h2 class="post-title">Hello Gridea</h2>
-      </a>
-      <div class="post-info">
-        <span>
-          2018-12-12
-        </span>
-        <span>
-          2 min read
-        </span>
-        
-          <a href="https://blackpupil2.com/tag/UxKpVCvVr/" class="post-tag">
-            # Gridea
-          </a>
-        
-      </div>
-      
-        <a href="https://blackpupil2.com/post/hello-gridea/" class="post-feature-image" style="background-image: url('https://blackpupil2.com/post-images/hello-gridea.png')">
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://blackpupil2.com/post/matlab/">
+                        matlab
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2020-04-22</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            line()函数可以在画布中画一些辅助线。
+line([起点横坐标，终点横坐标],[起点纵坐标，终点纵坐标])，
+line([1,2],[3,4])将画出（1,3）到(2,4)的一条直线，而不是(1,2)到(3,4)。😒
+
+subplot(131)
+line([1,2],[3,4]);
+subplot(132)
+line([1,1],[3,5],&#39;color&#39;,&#39;k&#39;,&#39;linestyle&#39;,&#39;--&#39;);
+subplot(133)
+line([3,5],[2,2],&#39;linestyle&#39;,&#39;-&#39;,&#39;color&#39;,&#39;r&#39;);
+
+注意：如果要想设置线的颜色以及格式，那么就可以像上面代码中的那样写就可以，首先要写一个’color’，然后后面紧跟着一个参数就是代表颜色的字母，如黑色’k’，然后还可以设置线的格式，首先要写参数’linestyle’，然后后面紧跟着一个参数就是线的格式，如虚线’- -’。当然了设置颜色以及线的格式没有先后顺序，但是必须要相互匹配，即’color’的后一个参数必须是表示颜色的字符，而不能写成表示线格式的，&#39;linestyle’的后一个参数必须是表示线格式的字符，而不能写成表示线颜色的。如写成下面格式就是错误的：
+line([3,5],[2,2],&#39;linestyle&#39;,&#39;--&#39;,&#39;color&#39;,&#39;k&#39;);
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://blackpupil2.com/post/matlab/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://blackpupil2.com/post/tong-ji-zi-fu/">
+                        统计字符
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-08-08</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            #include &amp;lt;stdio.h&amp;gt;
+int main(){
+    int letter,blank,digit,other;
+    char ch;
+    int i;
+    digit=other=blank=letter=0;
+    for(i=1;i&amp;lt;=10;i++){
+        ch=getchar();
+        if((ch&amp;gt;=&#39;a&#39;&amp;amp;&amp;amp;ch&amp;lt;=&#39;z&#39;)||(ch&amp;gt;=&#39;A&#39;&amp;amp;&amp;amp;ch&amp;lt;=&#39;Z&#39;)){
+            letter++;
+        }
+        else if(ch&amp;gt;=&#39;0&#39;&amp;amp;&amp;amp;ch&amp;lt;=&#39;9&#39;){
+            digit++;
+        }
+        else if(ch==&#39; &#39;||ch==&#39;\n&#39;){
+            blank++;
+        }
+        else
+            other++;
+    }
+    printf(&amp;quot;letter = %d, blank = %d, digit = %d, other = %d&amp;quot;,letter,blank,digit,other);
+    return 0;
+}
+
+注意英文字符包括大写字母
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://blackpupil2.com/post/tong-ji-zi-fu/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://blackpupil2.com/post/c-yu-yan-she-ji/">
+                        练习2-14 求奇数分之一序列前N项和
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-08-07</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            练习2-14 求奇数分之一序列前N项和
+输入格式:
+输入在一行中给出一个正整数N。
+输出格式:
+在一行中按照“sum = S”的格式输出部分和的值S，精确到小数点后6位。题目保证计算结果不超过双精度范围。
+#include &amp;lt;stdio.h&amp;gt;
+int main(){
+    double sum,item;
+    int N,denominator;
+    int i;
+    sum = 0;
+    denominator=1;
+    scanf(&amp;quot;%d&amp;quot;,&amp;amp;N);
+    for(i=1;i&amp;lt;=N;i++){
+        sum=sum+1.0/(denominator);
+        denominator=denominator+2;
+    }
+    printf(&amp;quot;sum = %.6f&amp;quot;,sum);
+    return 0;
+}
+
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://blackpupil2.com/post/c-yu-yan-she-ji/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://blackpupil2.com/post/hello-gridea/">
+                        Hello Gridea
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2018-12-12</time>
+                    
+                        <a href="https://blackpupil2.com/tag/UxKpVCvVr/" class="post-tag i-tag
+                            i-tag-primary">
+            #Gridea
         </a>
-      
-      <div class="post-abstract">
-        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://blackpupil2.com/post/hello-gridea/" class="post-feature-image" style="background-image:url(https://blackpupil2.com/post-images/hello-gridea.png) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                    <div class="post-content-abstract">
+                                        <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
 ✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
 
-      </di>
-    </article>
-  
-</div>
+                                    </div>
+                                    
+                                            <a class="btn btn-text" href="https://blackpupil2.com/post/hello-gridea/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
 
-    
-        <div class="pagination-container">
-  
-  
-</div>
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://blackpupil2.com/images/avatar.png?v=1587531392531)">
+        </div>
+        <h1 class="id_card-title">
+            BlackPupil的学习站
+        </h1>
+        <h2 class="id_card-description">
+            温故而知新
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
 
+        </div>
+    </div>
     
-        <div class="site-footer">
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
   Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
   <a class="rss" href="https://blackpupil2.com/atom.xml" target="_blank">RSS</a>
 </div>
 
 <script>
   hljs.initHighlightingOnLoad()
-
-  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
-
-  // This should probably be throttled.
-  // Especially because it triggers during smooth scrolling.
-  // https://lodash.com/docs/4.17.10#throttle
-  // You could do like...
-  // window.addEventListener("scroll", () => {
-  //    _.throttle(doThatStuff, 100);
-  // });
-  // Only not doing it here to keep this Pen dependency-free.
-
-  window.addEventListener("scroll", event => {
-    let fromTop = window.scrollY;
-
-    mainNavLinks.forEach((link, index) => {
-      let section = document.getElementById(decodeURI(link.hash).substring(1));
-      let nextSection = null
-      if (mainNavLinks[index + 1]) {
-        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-      }
-      console.log('section.offsetHeight', section.offsetHeight);
-      if (section.offsetTop <= fromTop) {
-        if (nextSection) {
-          if (nextSection.offsetTop > fromTop) {
-            link.classList.add("current");
-          } else {
-            link.classList.remove("current");    
-          }
-        } else {
-          link.classList.add("current");
-        }
-      } else {
-        link.classList.remove("current");
-      }
-    });
-  });
-
 </script>
 
-      </div>
     </div>
-  </body>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
 </html>
